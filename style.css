@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding:0;
+    color: black;
+}
+body{
+    overflow: hidden;
+}
+.rules{
+    background:fixed;
+    font-size: larger;
+    font-weight:bold;
+    margin-top: 8px;
+    margin-left: 20px;
+    padding: 5px;
+    padding-left: 8px;
+    padding-right: 8px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.gameContainer{
+    background-image: url(img/frame.png);
+    background-repeat: no-repeat;
+    background-size: 100vw 100vh;
+    width: 100%;
+    height: 100vh;
+}
+.gameBackground{
+    background-image: url(gif/runninbg.gif);
+}
+.gameNewBackground{
+    background-image: url(gif/beach.gif);
+}
+
+.dino{
+    background-image: url(img/mrun-removebg-preview.png);
+    box-sizing: border-box;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 200px;
+    margin-bottom: 85px;
+    height: 10px;
+    position: absolute;
+    bottom:0;
+    left: 52px;
+    padding-bottom: 150px;
+    margin-left: 100px;
+    
+}
+.dinoGif{
+    background-image: url(gif/mario1.gif);
+    width: 150px;
+    height: 40px;
+    margin-bottom: 85px;
+}
+.obstacle{
+    width: 160px;
+    height: 130px;
+    background-image: url(img/cturtle.png);
+    background-size: cover;
+    position: absolute;
+    bottom: 0;
+    left: 80vw;
+    margin-bottom: 75px;
+}
+.obstacleGif{
+    background-image: url(img/ttl.gif);
+    width: 260px;
+    height: 170px;
+    margin-bottom: 85px;
+}
+
+.animateDino{
+    animation: dino 0.6s linear;
+    
+}
+
+.obstacleAni{
+    animation: obstacleAni 6s linear infinite;
+    
+}
+.obstacleMedium{
+    animation: obstacleAni 4s linear infinite;
+}
+.obstacleHard{
+    animation: obstacleAni 2.5s linear infinite;
+}
+
+.gameOver{
+    position: relative;
+    top:63px;
+    font-size: 53px;
+    text-align: center; 
+    font-family: 'Ubuntu', sans-serif;
+    color: red;
+    display: none;
+}
+.gameStart{
+    background-color: rgb(55, 55, 155);
+    border-radius: 8px;
+    width: 50%;
+    position: relative;
+    font-size: 43px;
+    text-align: center; 
+    margin-left: 25%;
+    display: block;
+    font-family: 'Ubuntu', sans-serif;
+    color: rgb(247, 223, 9);
+}
+
+#scoreCont{
+    font-size: 25px;
+    color: black;
+    font-weight: bolder;
+    font-weight: bold;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+    border: 2px solid black;
+    padding: 12px;
+    font-family: 'Ubuntu', sans-serif;
+    border-radius: 10px;
+}
+
+@keyframes dino{
+    0%{
+        bottom: 0;
+    }
+    50%{
+        bottom: 422px;
+    }
+    100%{
+        bottom: 0; 
+    }
+}
+
+@keyframes obstacleAni{
+    0%{
+        left: 100vw;
+    }
+    100%{
+        left: -10vw;
+    }
+}
